@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bettermind</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- font -->
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.161/build/three.module.js",
+            "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161/examples/jsm/"
+           }
+        }
+      </script>
+</head>
+<body>
+
+    <div class="cursor"></div>
+    
+    <header>
+        <div class="nav-bar">
+            <div class="logo-wrapper">
+                <img src="/Assets/Logo_SVG.svg" alt="bettermind's company logo" class="logo">
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">How it Works</a>
+                <a href="#" class="nav-link">Resources</a>
+                <a href="#" class="nav-link">About Us</a>
+                <div class="nav-call">
+                    <button class="cta">
+                     Find a Therapist
+                    </button>
+                    <div class="cta-background"></div>
+                 </div>
+            </nav>
+        </div>
+        <section class="hero">
+            <div class="h1">
+                <h1 class="heading">
+                    Prioritize Your Mental Health<br>with Online Therapy.
+                </h1>
+            </div>
+            <div class="body">
+                <p class="hero-body">
+                    Connect with certified therapists online and start<br>your journey towards a healthier mind.
+                </p>
+            </div>
+            <div class="ipad-wrapper">
+                
+               <!-- (Tilt Effect) -->
+
+              <div data-tilt data-tilt-max="1" data-tilt-speed="800" data-tilt-perspective="400" data-tilt-reverse="true">
+                <img src="/Assets/Ipad.png" alt="an ipad showcasing the interface of the meeting app." class="ipad">
+              </div>
+
+            </div>
+        </section>
+    </header>
+
+
+
+    <main>
+
+        <section class="hiw">
+
+            <div class="step-1 step">
+                <div class="container">
+                    <div class="step-top">
+                        <h5 class="step-title">
+                            Step 1
+                        </h5>
+                        <h3 class="step-heading">
+                            Browse Therapists
+                        </h3>
+                    </div>
+                   <p class="step-para">
+                    Explore our network of licensed professionals to find the right therapist for your needs. 
+                    Filter by specialty, availability, and session type.
+                   </p>
+                </div>
+                <div class="container-blue">
+                    <div class="video-wrapper">
+                        <video class="cards"  autoplay muted loop>
+                            <source src="/Assets/Card Video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-2 step">
+                <div class="container-blue blue-2" id="blue-container">
+                    <canvas id="matter-canvas"></canvas>
+                </div>
+                <div class="container">
+                    <div class="step-top">
+                        <h5 class="step-title">
+                            Step 2
+                        </h5>
+                        <h3 class="step-heading-2">
+                            Book a Session
+                        </h3>
+                    </div>
+                    <p class="step-para">
+                        Select a convenient time for your session, whether it's via video, audio, or text.
+                        Easy scheduling at your fingertips.
+                    </p>
+                </div>
+            </div>
+
+            <div class="step-3 step">
+                <div class="container">
+                    <div class="step-top">
+                        <h5 class="step-title">
+                            Step 3
+                        </h5>
+                        <h3 class="step-heading-3">
+                             Begin Your Journey
+                        </h3>
+                    </div>
+                    <p class="step-para">
+                        Start your therapy session from the comfort of your home in a safe, 
+                        confidential environment.
+                    </p>
+                 </div>
+                 <div class="container-blue blue-3">
+                    <div class="blue-wrapper">
+                        <img src="/Assets/Blue Ipad.png" alt="" class="bipad">
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <section class="catalog">
+            
+            <div class="cat-top">
+                <h3 class="sec-head cath">
+                    Meet some of our<br>highly recommended therapists.
+                </h3>
+                <p class="sec-para catp">
+                    With specialized expertise and top<br>ratings from clients.
+                </p>
+            </div>
+            
+            <div class="profiles">
+
+                <div class="row">
+
+                    <div class="card">
+                        <img src="/Assets/Avatars/Rectangle 5.png" alt="" class="avatar">
+                        <div class="description">
+                            <p class="name">Dr. Emily Johnson</p>
+                            <p class="about">
+                                With over 10 years of experience, 
+                                Dr. Johnson provides expert care in managing anxiety and depression.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="/Assets/Avatars/Rectangle 5-3.png" alt="" class="avatar">
+                        <div class="description">
+                            <p class="name">Dr. Mitchell, LCSW</p>
+                            <p class="about">
+                                Sarah specializes in family dynamics and trauma therapy, 
+                                helping clients navigate complex challenges.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="card">
+                        <img src="/Assets/Avatars/Rectangle 5-1.png" alt="" class="avatar">
+                        <div class="description">
+                            <p class="name">Dr. Michael Lee</p>
+                            <p class="about">
+                                Dr. Lee focuses on mindfulness-based approaches
+                                for managing grief and stress.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="/Assets/Avatars/Rectangle 5-4.png" alt="" class="avatar">
+                        <div class="description">
+                            <p class="name">Dr. Amanda Collins</p>
+                            <p class="about">
+                                Dr. Collins is dedicated to helping clients manage stress
+                                and anxiety through evidence-based techniques.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+ 
+                    <div class="card">
+                        <img src="/Assets/Avatars/Rectangle 5-2.png" alt="" class="avatar">
+                        <div class="description">
+                            <p class="name">Dr. Natalie Kim</p>
+                            <p class="about">
+                                Dr. Kim specializes in working with children and teens, 
+                                helping them navigate behavioral challenges.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="/Assets/Avatars/Rectangle 5-5.png" alt="" class="avatar">
+                        <div class="description">
+                            <p class="name">Kevin Thompson, LMFT</p>
+                            <p class="about">
+                                Kevin works with couples to improve communication and resolve conflicts,
+                                creating healthier relationships.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="testimonials">
+            <div class="test-top">
+                <h3 class="sec-head testh">
+                    Real Stories from people
+                </h3>
+                <p class="sec-para testp">
+                    With specialized expertise and top<br> ratings from clients.
+                </p>
+            </div>
+
+              <div class="test-container c1">
+                 <h4 class="review r1">
+                    " BetterMind Therapy made finding the right therapist so easy. 
+                    I’ve seen significant improvement in my anxiety, 
+                    and the convenience of online sessions is a game changer. "
+                 </h4>
+                 <p class="reviewer">- Rachel M.</p>
+              </div>
+              <div class="control">
+                <div class="arrow-l arrow-left arrow">
+                    <img src="/Assets/Icons/Arrow.svg" alt="" class="arrow-svg">
+                </div>
+                <div class="arrow-r arrow-right arrow">
+                    <img src="/Assets/Icons/Arrow.svg" alt="" class="arrow-2">
+                </div>
+              </div>
+
+        </section>
+
+        <section class="faq">
+            <div class="faq-top">
+                <h3 class="sec-head faqh">
+                   Got questions? We've got answers!
+                </h3>
+                <p class="sec-para">
+                    Check out our FAQs to learn more about<br> 
+                    BetterMind Therapy and how we can support you.
+                </p>
+            </div>
+
+             <div class="faq-container">
+
+                <div class="accordion">
+                     <div class="question-box">
+                        <h5 class="question">
+                            What is BetterMind Therapy?
+                        </h5>
+                        <img src="/Assets/Icons/Plus.svg" alt="" class="expand">
+                     </div>
+                     <div class="answer">
+                        BetterMind Therapy is an online platform that connects you with licensed therapists
+                        who provide professional mental health support via video, audio, or text sessions.
+                     </div>
+                </div>
+
+                <div class="accordion">
+                    <div class="question-box">
+                       <h5 class="question">
+                           How do I choose a therapist?
+                       </h5>
+                       <img src="/Assets/Icons/Plus.svg" alt="" class="expand">
+                    </div>
+                    <div class="answer">
+                        You can browse our extensive directory of therapists, filtering by specialty, availability, and ratings. 
+                        Each therapist has a profile detailing their experience and approach to therapy.
+                    </div>
+               </div>
+
+               <div class="accordion">
+                    <div class="question-box">
+                    <h5 class="question">
+                        What types of therapy are offered?
+                    </h5>
+                    <img src="/Assets/Icons/Plus.svg" alt="" class="expand">
+                    </div>
+                    <div class="answer">
+                        We offer various therapy options, including individual therapy, couples therapy, 
+                        family therapy, and specialized support for issues like anxiety, depression, trauma, and more.
+                    </div>
+               </div>
+
+               <div class="accordion">
+                    <div class="question-box">
+                    <h5 class="question">
+                        Is my information safe and confidential?
+                    </h5>
+                    <img src="/Assets/Icons/Plus.svg" alt="" class="expand">
+                    </div>
+                    <div class="answer">
+                        Yes! Your privacy is our priority. All sessions are conducted in a secure, 
+                        HIPAA-compliant environment, ensuring your information remains confidential.
+                    </div>
+               </div>
+
+               <div class="accordion">
+                    <div class="question-box">
+                        <h5 class="question">
+                            Can I change my therapist?
+                        </h5>
+                        <img src="/Assets/Icons/Plus.svg" alt="" class="expand">
+                    </div>
+                    <div class="answer">
+                        Absolutely! If you feel that your current therapist isn’t the right fit, 
+                        you can easily browse and switch to another therapist at any time.
+                    </div>
+               </div>
+
+               <div class="accordion">
+                    <div class="question-box">
+                        <h5 class="question">
+                            Do you accept insurance?
+                        </h5>
+                        <img src="/Assets/Icons/Plus.svg" alt="" class="expand">
+                    </div>
+                    <p class="answer">
+                        While we do not directly accept insurance, many of our therapists can provide you
+                        with a receipt for reimbursement from your insurance provider. Check with your provider for more details.
+                    </p>
+               </div>
+
+               
+
+             </div>
+
+        </section>
+
+        <section class="final-cta">
+            <div class="content">
+                <h5 class="subtitle">
+                    Start Your Journey Today!
+                </h5>
+                <h2 class="fin-head">
+                    Ready to Take the<br>First Step?
+                </h2>
+                <p class="fin-para">
+                    Whether you're struggling with anxiety, stress, or just need someone to talk to, 
+                    we’re here for you—whenever and wherever you need.
+                </p>
+                <div class="fin-call">
+                    <button class="fin-cta cta">
+                     Find a Therapist
+                    </button>
+                    <div class="second-background"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        
+        <div class="footer-top">
+
+                <div class="left-side">
+
+                    <div class="footer-logo">
+                        <img src="/Assets/Logo_SVG.svg" alt="" class="footerl">
+                    </div>
+
+                    <div class="footer-description">
+                        <p class="foot-para">
+                            Connect with certified therapists online and<br>
+                            start your journey toward a healthier mind.
+                        </p>
+                    </div>
+
+                    <div class="socials">
+                        <div class="arrow-r fb">
+                        <img src="/Assets/Icons/Facebook.svg" alt="" class="facebook social-i">
+                        </div>
+                        <div class="arrow-r x">
+                            <img src="/Assets/Icons/X(twitter).svg" alt="" class="twitter social-i">
+                        </div>
+                        <div class="arrow-r yt">
+                            <img src="/Assets/Icons/Youtube.svg" alt="" class="youtube social-i">
+                        </div>
+                        <div class="arrow-r in">
+                            <img src="/Assets/Icons/Instagram.svg" alt="" class="instagram social-i">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="right-side">
+
+                    <div class="set-1 set">
+                        <p class="link-head">Company</p>
+                        <div class="links">
+                            <p class="foot-link">Our Story</p>
+                            <p class="foot-link">How it Works</p>
+                            <p class="foot-link">Meet Our therapists</p>
+                            <p class="foot-link">Success Stories</p>
+                            <p class="foot-link">Careers</p>
+                            <p class="foot-link">Blog</p>
+                        </div>
+                    </div>
+
+                    <div class="set-2 set">
+                        <p class="link-head">Services</p>
+                        <div class="links">
+                            <p class="foot-link">Individual Therapy</p>
+                            <p class="foot-link">Couples Therapy</p>
+                            <p class="foot-link">Teen Therapy</p>
+                            <p class="foot-link">Grief Counseling</p>
+                            <p class="foot-link">Trauma Therapy</p>
+                        </div>
+                    </div>
+
+                    <div class="set-3 set">
+                        <p class="link-head">Support</p>
+                        <div class="links">
+                            <p class="foot-link">FAQ</p>
+                            <p class="foot-link">Help Center</p>
+                            <p class="foot-link">Contact Us</p>
+                            <p class="foot-link">Cancellelation Policy</p>
+                        </div>
+                    </div>
+
+                    <div class="set-4 set">
+                        <p class="link-head">Get Involved</p>
+                        <div class="links">
+                            <p class="foot-link">Become a Therapist</p>
+                            <p class="foot-link">Partner with Us</p>
+                            <p class="foot-link">Press Inquiries</p>
+                            <p class="foot-link">Affiliate Program</p>
+                        </div>
+                    </div>
+
+                </div>
+
+        </div> 
+
+        <div class="foot-bottom">
+
+            <div class="bottom">
+                <p class="copyright">
+                    © 2024 BetterMind Therapy. All Rights Reserved. -Designed by Ameer Mavia.
+                </p>
+
+                <div class="bottom-links">
+                    <p class="foot-link">Terms & Conditions</p>
+                    <p class="foot-link">Privacy Policy</p>
+                </div>
+            </div>
+
+        </div>
+       
+
+    </footer>
+    
+    <script defer type="text/javascript" src="vanilla-tilt.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script defer src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+
+    <script defer src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.20.0/matter.min.js" integrity="sha512-6+7rTBmR6pRFe9fa0vCFjFaHZj/XYa7774bEBzRtxgdpIJOS++R3cKd6Prg/eJmxtsJotd8KAg4g57uuVQsZKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script defer type="module" src="3d.js"></script>
+
+    <script defer src="/index.js"></script>
+
+    <script defer src="/logic.js"></script>
+    
+    
+</body>
+</html>
